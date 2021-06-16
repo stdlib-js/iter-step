@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/iter-step",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create an iterator which returns a sequence of numbers according to a specified increment.",
   "license": "Apache-2.0",
   "author": {
