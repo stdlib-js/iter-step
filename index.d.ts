@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2019 The Stdlib Authors.
@@ -16,16 +16,28 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Iterator as Iter, IterableIterator } from '@stdlib/types/iter';
+
+// Define a union type representing both iterable and non-iterable iterators:
+type Iterator = Iter | IterableIterator;
 
 /**
-* Create an iterator which returns a sequence of numbers according to a specified increment.
+* Returns an iterator which returns a sequence of numbers according to a provided increment.
 *
-* @module @stdlib/iter-step
+* ## Notes
+*
+* -   If an environment supports `Symbol.iterator`, the returned iterator is iterable.
+*
+* @param start - starting value (inclusive)
+* @param increment - increment
+* @param N - number of values (default: 1e308)
+* @returns iterator
 *
 * @example
-* var iterStep = require( '@stdlib/iter-step' );
-*
 * var iter = iterStep( 0, 2, 10 );
 *
 * var v = iter.next().value;
@@ -39,12 +51,9 @@
 *
 * // ...
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function iterStep( start: number, increment: number, N?: number ): Iterator; // tslint:disable-line: max-length
 
 
 // EXPORTS //
 
-module.exports = main;
+export = iterStep;
