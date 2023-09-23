@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import iterStep from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-step@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/iter-step/tags). For example,
+
+```javascript
 import iterStep from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-step@v0.1.0-esm/index.mjs';
 ```
 
@@ -172,7 +177,7 @@ var bool = it.next().done;
 <body>
 <script type="module">
 
-import iterStep from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-step@v0.1.0-esm/index.mjs';
+import iterStep from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-step@esm/index.mjs';
 
 // Create an iterator which is subject to floating-point rounding errors:
 var it = iterStep( 0.0, 0.02, 50 );
