@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import iterStep from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-step@deno/mod.js';
+import iterStep from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-step@v0.2.0-deno/mod.js';
 ```
 
 #### iterStep( start, increment\[, N] )
@@ -167,7 +167,7 @@ var bool = it.next().done;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import iterStep from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-step@deno/mod.js';
+import iterStep from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-step@v0.2.0-deno/mod.js';
 
 // Create an iterator which is subject to floating-point rounding errors:
 var it = iterStep( 0.0, 0.02, 50 );
