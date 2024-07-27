@@ -45,14 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/iter-step
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import iterStep from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-step@esm/index.mjs';
+var iterStep = require( '@stdlib/iter-step' );
 ```
 
 #### iterStep( start, increment\[, N] )
@@ -128,8 +146,8 @@ var bool = it.next().done;
     If you desire more control over value precision, consider using [roundn][@stdlib/math/base/special/roundn]:
 
     ```javascript
-    import roundn from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-roundn@esm/index.mjs';
-    import iterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-map@esm/index.mjs';
+    var roundn = require( '@stdlib/math-base-special-roundn' );
+    var iterMap = require( '@stdlib/iter-map' );
 
     function round( v ) {
         return roundn( v, -2 );
@@ -166,13 +184,8 @@ var bool = it.next().done;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import iterStep from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-step@esm/index.mjs';
+```javascript
+var iterStep = require( '@stdlib/iter-step' );
 
 // Create an iterator which is subject to floating-point rounding errors:
 var it = iterStep( 0.0, 0.02, 50 );
@@ -186,10 +199,6 @@ while ( true ) {
     }
     console.log( v.value );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -232,7 +241,7 @@ while ( true ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -262,8 +271,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/iter-step.svg
 [npm-url]: https://npmjs.org/package/@stdlib/iter-step
 
-[test-image]: https://github.com/stdlib-js/iter-step/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/iter-step/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/iter-step/actions/workflows/test.yml/badge.svg?branch=v0.2.2
+[test-url]: https://github.com/stdlib-js/iter-step/actions/workflows/test.yml?query=branch:v0.2.2
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/iter-step/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/iter-step?branch=main
@@ -295,21 +304,21 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/iter-step/main/LICENSE
 
-[@stdlib/math/base/special/roundn]: https://github.com/stdlib-js/math-base-special-roundn/tree/esm
+[@stdlib/math/base/special/roundn]: https://github.com/stdlib-js/math-base-special-roundn
 
 <!-- <related-links> -->
 
-[@stdlib/array/from-iterator]: https://github.com/stdlib-js/array-from-iterator/tree/esm
+[@stdlib/array/from-iterator]: https://github.com/stdlib-js/array-from-iterator
 
-[@stdlib/iter/datespace]: https://github.com/stdlib-js/iter-datespace/tree/esm
+[@stdlib/iter/datespace]: https://github.com/stdlib-js/iter-datespace
 
-[@stdlib/iter/incrspace]: https://github.com/stdlib-js/iter-incrspace/tree/esm
+[@stdlib/iter/incrspace]: https://github.com/stdlib-js/iter-incrspace
 
-[@stdlib/iter/linspace]: https://github.com/stdlib-js/iter-linspace/tree/esm
+[@stdlib/iter/linspace]: https://github.com/stdlib-js/iter-linspace
 
-[@stdlib/iter/logspace]: https://github.com/stdlib-js/iter-logspace/tree/esm
+[@stdlib/iter/logspace]: https://github.com/stdlib-js/iter-logspace
 
-[@stdlib/iter/unitspace]: https://github.com/stdlib-js/iter-unitspace/tree/esm
+[@stdlib/iter/unitspace]: https://github.com/stdlib-js/iter-unitspace
 
 <!-- </related-links> -->
 
